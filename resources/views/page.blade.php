@@ -1,1 +1,1 @@
-<?php echo hello world ?>
+hello world! My name is {{ $name }}
