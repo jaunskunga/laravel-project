@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/page', function () {
-    $name = 'Baiba'; 
-    return view('page', [
-        'name' => $name,
-    ]);
-});
+Route::get('/page', [PageController::class, 'index']);
